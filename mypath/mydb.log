@@ -1,0 +1,7 @@
+/*C3*/SET SCHEMA PUBLIC
+CREATE TABLE IF NOT EXISTS clients (\u000a   id VARCHAR(50) NOT NULL, \u000a   fool_name VARCHAR(50) NOT NULL,\u000a   telephone_number VARCHAR(50) NOT NULL,\u000a    email VARCHAR(50) NOT NULL,\u000a    passport INT NOT NULL UNIQUE,\u000a    bank_id VARCHAR(50), \u000a    PRIMARY KEY (id) )
+CREATE TABLE IF NOT EXISTS credits (\u000a   id VARCHAR(50) NOT NULL,\u000a   credit_limit INT NOT NULL,\u000a   interest_rate INT NOT NULL,\u000a   bank_id VARCHAR(50),\u000a    PRIMARY KEY (id) )
+CREATE TABLE IF NOT EXISTS offers (\u000a   id VARCHAR(50) NOT NULL,\u000a   client_id VARCHAR(50) NOT NULL,\u000a   credit_id VARCHAR(50) NOT NULL,\u000a   credit_amount INT NOT NULL, \u000a   PRIMARY KEY (id),\u000a    CONSTRAINT client_id_fk \u000a    FOREIGN KEY (client_id)  REFERENCES clients (id), \u000a   CONSTRAINT credit_id_fk \u000a   FOREIGN KEY (credit_id)  REFERENCES credits (id))
+CREATE TABLE IF NOT EXISTS banks (\u000a  id VARCHAR(50) NOT NULL,\u000a  name VARCHAR(50) NOT NULL,    PRIMARY KEY (id) )
+INSERT INTO CLIENTS VALUES('9c48f77a-1e3c-4e75-8e78-cefafd701483','\u0422\u043e\u043b\u0441\u0442\u043e\u0439 \u041b\u0435\u0432 \u041d\u0438\u043a\u043e\u043b\u0430\u0435\u0432\u0438\u0447','22-33-44','Great_Writer@mail.ru',1231233,NULL)
+COMMIT

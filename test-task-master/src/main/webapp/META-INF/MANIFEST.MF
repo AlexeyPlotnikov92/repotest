@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.10.8
+Created-By: 11.0.10+9 (Oracle Corporation)
+Specification-Title: HSQLDB
+Specification-Version: 2.6.0
+Specification-Vendor: The HSQL Development Group
+Implementation-Title: Standard runtime
+Implementation-Version: 2.6.0
+Implementation-Vendor: The HSQL Development Group
+Sealed: true
+Main-Class: org.hsqldb.util.DatabaseManagerSwing
+
